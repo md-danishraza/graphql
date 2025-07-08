@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Modern JS output
+    "module": "CommonJS", // Node.js compatibility
+    "rootDir": "src", // Your source folder
+    "outDir": "build", // Compiled JS output
+    "esModuleInterop": true, // Enables default imports from CommonJS
+    "forceConsistentCasingInFileNames": true, // Prevent casing bugs on different OS
+    "strict": true, // Strict type-checking
+    "skipLibCheck": true, // Skips type checking of .d.ts files
+    "moduleResolution": "node", // Required for Express, Apollo imports
+    "resolveJsonModule": true, // Allows importing .json files
+    "types": ["node"], // Include Node.js type declarations
+    "noUnusedLocals": true, // Catch unused variables
+    "noImplicitAny": true, // Prevents fallback to 'any' type
+    "allowJs": false // Ensures you’re only compiling .ts files
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "build"]
+}
