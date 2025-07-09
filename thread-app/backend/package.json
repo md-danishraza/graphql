@@ -3,22 +3,29 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
-  "scripts": {
-    "start": "node build/index.js",
-    "dev": "npx tsc-watch --onSuccess \"npm start\""
-  },
+ "scripts": {
+  "generate": "npx prisma generate",
+  "build": "npm run generate && tsc",
+  "start": "node build/index.js",
+  "dev": "npx tsc-watch --onSuccess \"npm run build && npm start\"",
+  "postinstall": "npm run generate"
+},
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@apollo/server": "^4.12.2",
     "@as-integrations/express5": "^1.1.1",
+    "@prisma/client": "^6.11.1",
+    "@types/node": "^24.0.12",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "graphql": "^16.11.0"
+    "graphql": "^16.11.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3"
+    "@types/express": "^5.0.3",
+    "prisma": "^6.11.1"
   }
 }

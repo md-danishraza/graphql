@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "ES2020", // Modern JS output
     "module": "CommonJS", // Node.js compatibility
-    "rootDir": "src", // Your source folder
-    "outDir": "build", // Compiled JS output
+    "rootDir": "./src", // Your source folder
+    "outDir": "./build", // Compiled JS output
     "esModuleInterop": true, // Enables default imports from CommonJS
     "forceConsistentCasingInFileNames": true, // Prevent casing bugs on different OS
     "strict": true, // Strict type-checking
@@ -15,6 +15,6 @@
     "noImplicitAny": true, // Prevents fallback to 'any' type
     "allowJs": false // Ensures you’re only compiling .ts files
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/generated/**/*.ts"],
   "exclude": ["node_modules", "build"]
 }
