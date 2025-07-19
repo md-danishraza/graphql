@@ -1,0 +1,19 @@
+{
+  "name": "crashcourse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+   "start":"nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "@apollo/server": "^5.0.0",
+    "cross-fetch": "^4.1.0",
+    "graphql": "^16.11.0"
+  }
+}
